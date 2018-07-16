@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Saadman957/Simple-Node-Server.git"
+    "url": "git+https://github.com/subarna8/simpleNodeServer.git"
   },
   "keywords": [
     "SDMN"
   ],
-  "author": "Saadman",
+  "author": "Subarna",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Saadman957/Simple-Node-Server/issues"
+    "url": "https://github.com/subarna8/simpleNodeServer/issues"
   },
-  "homepage": "https://github.com/Saadman957/Simple-Node-Server#readme"
+  "homepage": "https://github.com/subarna8/simpleNodeServer#readme"
 }
