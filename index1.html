@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Simple Node Server </title>
+        <title>User form</title>
     </head>
+    
     <body>
-        <h1>Simple Node Server</h1>
-
-     <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-     <br></br>
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-         <br></br>
-      <button type="submit">Submit</button>
-      <label>
-          <br></br>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
+        <h1>User details</h1>
+        <label>Name</label>
+        <input id = "name" type="text" />
+        <label>Email</label>
+        <input id = "email" type ="email"/>
+        <button id = "submit">Submit</button></button>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script>
+    var user ={ name: "", email: ""};
+    $('#submit').click(function(){
+        user.name = $("#name").val();
+        user.email = $("#email").val();
+        $.ajax({
+            method:"POST",
+            url:"/submit_user",
+            data: user
+        }).done(function(response){
+            console.log(response);
+        }).fail(function(response){
+            console.log(response);
+        })
+    });
+</script>
     </body>
 </html>
+
+
+<!--<form action="/signup" method="post">
+    <div>
+        <label>Username:</label>
+        <input type="text" name="username"/><br/>
+    </div>
+    <div>
+        <label>email:</label>
+        <input type="text" name="email"/>
+    </div>
+    <div><input type="submit" value="signup"/></div>
+</form>-->
